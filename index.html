@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>zekat hesapla</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="container d-flex justify-content-center ">
+            <main  class="col-12 col-md-10 col-lg-8">
+                <div class="py-5 text-center">
+
+                    <h2>Zekat Hesaplama Formu</h2>
+                    <p class="lead">
+                        <strong>Bir yıllık bütçenizi</strong>
+                        göz önüne alarak tüm varlıklarınızdan borçlarınızı çıkardığınızda 80gr altın değerinde varlığınız  varsa %2.5 zekat vermeniz gerekiyor</p>
+                </div>
+
+                <div class="row g-5 bg-info d-flex justify-content-center ">
+                    <div class="col-10 col-md-5 order-md-last">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-danger">Özet</span>
+
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 id="" class="my-0">TL</h6>
+                                </div>
+                                <span id="toplamTl" class="text-muted">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 id="" class="my-0">USD</h6>
+
+                                </div>
+                                <span id="toplamUsd" class="text-muted">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 id="" class="my-0">Euro</h6>
+
+                                </div>
+                                <span id="toplamEuro" class="text-muted">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 id="" class="my-0">Altın (toplam)</h6>
+
+                                </div>
+                                <span id="toplamAltin" class="text-muted">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                <div>
+                                    <h6 id="" class="my-0">Gümüş (toplam)</h6>
+
+                                </div>
+                                <span id="toplamGumus" class="text-muted">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <div class="text-success">
+                                    <h6 class="my-0">Borçlar (toplam)</h6>
+
+                                </div>
+                                <span id="toplamBorclar" class="text-success">0</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between fw-1 fs-5">
+                                <span>Toplam (TL)</span>
+                                <span id="genelToplam" class="text-success">
+                                    <strong>0</strong>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center   fs-5 fs-md-0">
+                                <span>Zekat Miktarı(2.5%)</span>
+                                <span id="zekat" class="text-success ">
+                                    <strong>0</strong>
+                                </span>
+                            </li>
+                        </ul>
+
+
+                        <!-- Kurlar -->
+
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-danger">Güncel Kurlar</span>
+
+                        </h4>
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <small>(kurlar temsilidir)</small><hr class="my-1"><p>
+                                    Dolar: 18,25 ₺
+                                    <br>
+                                    Euro: 18,22 ₺
+                                    <br>
+                                    Gram Altın: 999,05 ₺
+                                    <br>
+                                    Çeyrek Altın: 1.666,00 ₺
+                                    <br>
+                                    Yarım Altın: 3.286,00 ₺
+                                    <br>
+                                    Tam Altın: 6.572,00 ₺
+                                    <br>
+                                    Cumhuriyet Altını: 6.572,00 ₺
+                                    <br>
+                                    22 Ayar Bilezik: 930,04 ₺
+                                    <br>
+                                    Gümüş: 11,35 ₺
+                                    <br></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-10 col-md-7 bg-info pb-5">
+                        <h4 class="mb-3 text-danger">Varlıklarınız</h4>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+
+
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Tl</label>
+                                    <input type="text" class="form-control carp" name="tl" id="tl" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Usd</label>
+                                    <input type="text" class="form-control carp" name="usd" id="usd" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Euro</label>
+                                    <input type="text" class="form-control carp" name="euro" id="euro" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Gr Altın (gr)</label>
+                                    <input type="text" class="form-control carp" name="grAltin" id="grAltin" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Çeyrek Altın (adet)
+                                    </label>
+                                    <input type="text" class="form-control carp" name="ceyrek" id="ceyrek" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Yarım Altın (adet)
+                                    </label>
+                                    <input type="text" class="form-control carp" name="yarim" id="yarim" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Tam Altın (adet)
+                                    </label>
+                                    <input type="text" class="form-control carp" name="tam" id="tam" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Cumhuriyet Altını (adet)
+                                    </label>
+                                    <input type="text" class="form-control carp" name="cumhuriyet" id="cumhuriyet" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">22 Ayar Bilezikleriniz (gr)</label>
+                                    <input type="text" class="form-control carp" name="bilezik" id="bilezik" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Gümüş (gr)</label>
+                                    <input type="text" class="form-control carp" name="gumus" id="gumus" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+
+                                <hr class="my-4">
+                                <h4 class="mb-3 text-danger">Borçlarınız</h4>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Tl Borçlarınız</label>
+                                    <input type="text" class="form-control carp" name="borcTl" id="borcTl" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Usd borçlarınız</label>
+                                    <input type="text" class="form-control carp" name="borcUsd" id="borcUsd" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="firstName" class="form-label">Euro Borçlarınız</label>
+                                    <input type="text" class="form-control carp" name="borcEuro" id="borcEuro" placeholder="" value="0" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+                                <hr class="my-4">
+
+                                <button class="w-100 btn btn-primary btn-lg" onclick="toplamHesapla()" type="button">Hesapla</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy;2022</p>
+        
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
