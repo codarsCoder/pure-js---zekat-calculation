@@ -76,8 +76,8 @@
     for(let k = 0; k < changeElement.length; k++){
         changeElement[k].addEventListener("change", function(){
             toplamHesapla();
-            const elementt = document.getElementById("ozet");
-                  elementt.scrollIntoView();
+            // const elementt = document.getElementById("ozet");
+            //       elementt.scrollIntoView();
         })
     }
 
